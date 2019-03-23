@@ -26,8 +26,6 @@ class DateController
         InitializeRecentDays(startDate);
         this.lastDay = recentDays.LastOrDefault();
 
-        PrintRecentDays();
-
         if(Instance != null)
         {
             Debug.Log("There should never be two DateControllers");
@@ -56,8 +54,7 @@ class DateController
 
         recentDays.Enqueue(newLastDay);
         Debug.Log("New Queue");
-        PrintRecentDays();
-
+    
         this.firstDay = this.firstDay.AddDays(1);
         this.lastDay = this.lastDay.AddDays(1);
     }
