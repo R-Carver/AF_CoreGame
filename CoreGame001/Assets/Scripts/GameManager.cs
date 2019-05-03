@@ -11,11 +11,13 @@ public class GameManager : MonoBehaviour
     DateTime startDate = new DateTime(2018, 9, 22);
 
     DateController dateController;
+    PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
         dateController = new DateController(startDate);
+        playerController = PlayerController.Instance;
     }
 
     // Update is called once per frame
